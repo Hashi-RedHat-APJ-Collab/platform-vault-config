@@ -1,3 +1,3 @@
-path "identity/oidc/provider/team_se/authorize" {
+path "identity/oidc/provider/github_admins/authorize" {
     capabilities = [ "read" ]
 }
