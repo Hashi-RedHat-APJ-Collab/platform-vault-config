@@ -1,3 +1,3 @@
-path "ssh/sign/boundary" {
+path "ssh/sign/aap" {
   capabilities = ["read", "update"]
 }
