@@ -8,7 +8,7 @@ data "tfe_outputs" "github_identities" {
 }
 
 # Create entities and aliases in Vault since the OIDC provider needs an entity
-resource "vault_identity_entity_alias" "se" {
+resource "vault_identity_entity_alias" "admins" {
   for_each = vault_identity_entity.se
   name = each.value.name
   mount_accessor = vault_github_auth_backend.this.accessor
