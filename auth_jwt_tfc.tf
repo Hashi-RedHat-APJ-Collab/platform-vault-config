@@ -6,7 +6,7 @@ resource "vault_auth_backend" "jwt_tfc" {
 
 
 resource "vault_jwt_auth_backend_role" "admins" {
-  backend         = "jwt_tfc"
+  backend         = vault_auth_backend.jwt_tfc.path
   role_name       = "vault_admins"
   token_policies  = [
     #vault_policy.generate_tfc_token.name,
@@ -31,7 +31,7 @@ resource "vault_jwt_auth_backend_role" "admins" {
 }
 
 resource "vault_jwt_auth_backend_role" "tfc" {
-  backend         = "jwt_tfc"
+  backend         = vault_auth_backend.jwt_tfc.path
   role_name       = "tfc"
   token_policies  = [
     "terraform_cloud",
