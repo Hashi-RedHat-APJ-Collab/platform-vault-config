@@ -1,4 +1,11 @@
-resource "vault_jwt_auth_backend_role" "boundary_admins" {
+#create vault mount for jwt_tfc
+resource "vault_auth_backend" "jwt_tfc" {
+  type = "jwt"
+  path = "jwt_tfc"
+}
+
+
+resource "vault_jwt_auth_backend_role" "admins" {
   backend         = "jwt_tfc"
   role_name       = "vault_admins"
   token_policies  = [
