@@ -1,5 +1,5 @@
 resource "vault_identity_group" "admins" {
-  name = "github_admins"
+  name = "OwnersTeam"
   type = "internal"
   policies = [
     "admin",
