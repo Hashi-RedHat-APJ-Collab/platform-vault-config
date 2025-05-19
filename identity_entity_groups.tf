@@ -3,6 +3,7 @@ resource "vault_identity_group" "admins" {
   type = "internal"
   policies = [
     "admin",
+    "auth_to_oidc",
     "generate_certificate",
     "sign_ssh_certificate"
   ]

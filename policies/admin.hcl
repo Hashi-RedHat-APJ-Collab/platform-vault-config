@@ -8,7 +8,7 @@ path "/sys/policies" {
   capabilities = ["list", "read"]
 }
 
-path "/sys/policies/+" {
+path "/sys/policies/*" {
   capabilities = ["create", "read", "update", "delete", "list", "sudo"]
 }
 
