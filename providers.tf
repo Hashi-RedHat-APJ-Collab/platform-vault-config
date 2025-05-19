@@ -15,5 +15,9 @@ terraform {
 
 
 provider "vault" {
-  namespace = "admin/tfo-apj-demos"
+  namespace = "admin/hashi-redhat"
+}
+
+provider "tfe" {
+  organization = var.tfc_organization
 }
