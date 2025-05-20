@@ -1,12 +1,14 @@
 #create vault mount for jwt_tfc
-resource "vault_auth_backend" "jwt_tfc" {
+resource "vault_jwt_auth_backend" "jwt_tfc" {
   type = "jwt"
   path = "jwt_tfc"
+  oidc_discovery_url = "https://app.terraform.io"
+  bound_issuer       = "https://app.terraform.io"
 }
 
 
 resource "vault_jwt_auth_backend_role" "admins" {
-  backend         = vault_auth_backend.jwt_tfc.path
+  backend         = vault_jwt_auth_backend.jwt_tfc.path
   role_name       = "vault_admins"
   token_policies  = [
     "admin"
