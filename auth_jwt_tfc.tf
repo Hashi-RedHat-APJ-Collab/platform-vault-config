@@ -17,7 +17,7 @@ resource "vault_jwt_auth_backend_role" "admins" {
   ]
   bound_claims_type = "glob"
   bound_claims = {
-    sub = "organization:Hashi-RedHat-APJ-Collab:*:workspace:*:run_phase:*"
+    sub = "organization:Hashi-RedHat-APJ-Collab:project:*:workspace:*:run_phase:*"
   }
   user_claim      = "terraform_full_workspace"
   role_type       = "jwt"
