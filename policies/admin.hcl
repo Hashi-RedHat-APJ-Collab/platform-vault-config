@@ -115,3 +115,11 @@ path "sys/audit/+" {
 path "sys/remount" {
 	capabilities = ["create", "read", "update", "delete", "list", "sudo"]
 }
+
+path "identity/*" {
+  capabilities = [ "create", "read", "update", "delete", "list" ]
+}
+
+path "entities/*" {
+  capabilities = [ "create", "read", "update", "delete", "list" ]
+}
