@@ -84,11 +84,11 @@ path "+/creds/+" {
 
 
 # --- Manage entities and aliases
-path "identity/+" {
+path "identity/*" {
   capabilities = [ "create", "read", "update", "delete", "list" ]
 }
 
-path "entities/+" {
+path "entities/*" {
   capabilities = [ "create", "read", "update", "delete", "list" ]
 }
 
@@ -114,14 +114,6 @@ path "sys/audit/+" {
 # --- Relocate mounts
 path "sys/remount" {
 	capabilities = ["create", "read", "update", "delete", "list", "sudo"]
-}
-
-path "identity/*" {
-  capabilities = [ "create", "read", "update", "delete", "list" ]
-}
-
-path "entities/*" {
-  capabilities = [ "create", "read", "update", "delete", "list" ]
 }
 
 # Applies to every path in the cluster.
