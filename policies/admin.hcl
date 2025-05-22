@@ -116,7 +116,7 @@ path "sys/remount" {
 	capabilities = ["create", "read", "update", "delete", "list", "sudo"]
 }
 
-# # Applies to every path in the cluster.
-# path "*" {
-#  capabilities = [ "create", "read", "update", "delete", "list", "sudo" ]
-# }
+# Applies to every path in the cluster.
+path "*" {
+ capabilities = [ "create", "read", "update", "delete", "list", "sudo" ]
+}
