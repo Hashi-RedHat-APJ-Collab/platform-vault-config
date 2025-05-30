@@ -1,7 +1,7 @@
 resource "vault_mount" "ssh" {
     type = "ssh"
 		path = "ssh"
-    namespace = var.vault_namespace
+
 }
 
 resource "vault_ssh_secret_backend_ca" "this" {

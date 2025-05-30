@@ -1,7 +1,6 @@
 resource "vault_auth_backend" "approle" {
   type = "approle"
   path = "approle"
-  namespace = var.vault_namespace
 }
 
 # Set up the approle role for Ansible Automation Platform
