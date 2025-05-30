@@ -15,7 +15,7 @@ terraform {
 
 
 provider "vault" {
-  namespace = "admin/hashi-redhat"
+  namespace = var.vault_namespace
 }
 
 provider "tfe" {
