@@ -35,13 +35,10 @@ path "auth/*" {
 }
 
 # --- Mangage roles for any auth/secret engine
-path "+/roles/+" {
+path "+/roles/*" {
   capabilities = ["create", "read", "update", "delete", "list", "sudo"]
 }
 
-path "+/role/+" {
-  capabilities = ["create", "read", "update", "delete", "list", "sudo"]
-}
 
 # --- Manage secret engines
 path "sys/mounts/+" {
