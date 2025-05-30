@@ -15,7 +15,6 @@ terraform {
 
 
 provider "vault" {
-  namespace = var.vault_namespace
 }
 
 provider "tfe" {
